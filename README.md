@@ -2,7 +2,7 @@
 
 Status: Meme
 
-A 681 bytes zero-config router that makes a static site a blazingly fast.
+A 681 bytes router that makes a static site a blazingly fast.
 
 ## QuickStart
 
