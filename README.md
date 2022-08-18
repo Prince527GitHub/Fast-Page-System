@@ -1,1 +1,1 @@
-# Fast-Page-System (FPS)
+# Fast Page System (FPS)
