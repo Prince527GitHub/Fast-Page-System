@@ -9,9 +9,11 @@ async function page(url) {
     const pageData = document.querySelectorAll("[data-page]");
     for (let index = 0; index < pageData.length; index++) {
         const element = pageData[index];
-        const callback = () => page(element.dataset.page);
-        element.addEventListener('click', callback);
-        element.removeEventListener('click', callback);
+        const listener = () => {
+            page(element.dataset.page);
+            element.removeEventListener('click', listener);
+        };
+        element.addEventListener('click', listener);
     }
 
     const switchData = document.querySelectorAll("[data-switch]");
