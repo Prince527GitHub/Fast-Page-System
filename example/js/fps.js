@@ -9,14 +9,20 @@ async function page(url) {
     const pageData = document.querySelectorAll("[data-page]");
     for (let index = 0; index < pageData.length; index++) {
         const element = pageData[index];
-        element.addEventListener('click', () => page(element.dataset.page));
+        const callback = () => page(element.dataset.page);
+        element.addEventListener('click', callback);
+        element.removeEventListener('click', callback);
     }
 
     const switchData = document.querySelectorAll("[data-switch]");
     for (let index = 0; index < switchData.length; index++) {
         const element = switchData[index];
         const urlData = element.dataset.switch.split(",").filter((e) => e !== url);
-        element.addEventListener('click', () => page(urlData[0]));
+        const listener = () => {
+            page(urlData[0]);
+            element.removeEventListener('click', listener);
+        };
+        element.addEventListener('click', listener);
     }
 
     currentPage = url;
