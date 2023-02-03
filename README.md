@@ -2,7 +2,7 @@
 
 Status: Meme
 
-A 681 bytes router that makes a static site blazingly fast.
+A 813 bytes router that makes a static site blazingly fast.
 
 ## QuickStart
 
