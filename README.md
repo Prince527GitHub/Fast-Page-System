@@ -1,6 +1,6 @@
 <h1 align="center">Fast Page System (FPS)</h1>
 
-Status: Meme
+Status: Alpha
 
 A 813 bytes router that makes a static site blazingly fast.
 
